@@ -1,0 +1,95 @@
+//Question 1 
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+//Initialize variables; 
+	int xcoord1;
+	int ycoord1;
+	int length1;
+	int height1;
+
+	int xcoord2;
+	int ycoord2;
+	int length2;
+	int height2;
+
+//User input for rectangle information
+	cout << "Enter the information for the first rectangle " << endl;
+	cout << "x-coordinate: " << endl;	
+	cin >> xcoord1; 
+	cout << "y-coordinate: " << endl;
+	cin >> ycoord1;
+	cout << "length: " << endl;
+	cin >> length1;
+	cout << "height: " << endl;
+	cin >> height1; 
+	
+	cout << "Enter the information for the second rectangle " << endl;
+	cout << "x-coordinate: " << endl;	
+	cin >> xcoord2; 
+	cout << "y-coordinate: " << endl;
+	cin >> ycoord2;
+	cout << "length: " << endl;
+	cin >> length2;
+	cout << "height: " << endl;
+	cin >> height2; 
+
+
+//If x and y coordinates of the rectangle furtherest from the orgin lies withing both the length and width of the 
+//Rectangle closest to the orgin there is interlap 
+
+//find rectangle closest to the orgin 
+	if(xcoord1 <= xcoord2)
+	{
+		int x1 = xcoord1;
+		int l1 = length1; 
+		
+		int x2 = xcoord2; 
+	} 
+	else 
+	{
+		int x1 = xcoord2;
+		int l1 = length2; 
+
+		int x2 = xcoord1;
+	}
+
+	if(ycoord1 <= ycoord2)
+	{
+		int y1 = ycoord1;
+		int h1 = height1; 
+		
+		int y2 = ycoord2; 
+	} 
+	else 
+	{
+		int y1 = ycoord2;
+		int h1 = height2; 
+
+		int y2 = ycoord1;
+	}
+
+//End points of the rectangles 
+	int xend1 = x1 + l1; 
+	int yend1 = y1 + h1; 
+	
+//Check for overlap with the furtherest rectangle
+	if (x2>=x1 && x2<=xend1 && y2>=y1 && y2<=yend1)
+	{
+		cout << "THE RECTANGLES INTERSECT" << endl;
+	}
+	else 
+	{
+		cout << "THE RECTANGLES DO NOT INTERSECT" << endl;
+	}
+
+	return 0;
+}
+
+
+

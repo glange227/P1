@@ -1,0 +1,68 @@
+Question 3:
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+
+	int num1 = 0;
+	int num2 = 0;
+	int x = 0;
+	int y = 0;
+	int a = 0;
+	int b = 0;
+
+	cout << "Enter two numbers between 0 and 100: " << endl;
+	cin >> num1;
+	cin >> num2;
+
+//Converts to ternary
+	
+	int n1[5]= {};
+	i = 4;
+	while(i>=0)
+	{
+		while(num>0)
+		{
+			n1[i] = num % 3;
+			i = i -1;
+			num = num/3;
+		}
+	n1[i] = 0
+	i = i -1;
+	}  
+
+
+	int n2[5]= {};
+	i = 4;
+	while(i>=0)
+	{
+		while(num>0)
+		{
+			n2[i] = num % 3;
+			i = i -1;
+			num = num/3;
+		}
+	n2[i] = 0
+	i = i -1;
+	}  
+
+//Calculate hamming distance 
+	for(y<=4)
+	{
+		a = n1[y];
+		b = n2[y];
+		if (a==b)
+		{
+			x++;
+		}
+		y++;	
+	}
+
+	cout << "The hamming distance between " << num1 << " and " << num2 << " is " << x << endl;
+
+	return 0; 
+}

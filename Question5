@@ -1,0 +1,43 @@
+Question 5 
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+//Initalize variables 
+	char letter;
+	
+//User input for a letter 
+	cout << "Enter a letter: " <<endl;
+	cin >> letter;
+	c = int(letter);  
+	
+	if( c < 65 && c > 90 || c < 97 && c > 122)
+	{
+		if (c > 90)
+		{
+		//converts lower to uppercase letters 
+			c = c - 32;
+		}
+		if (c == 90)
+		{
+		//for case letter is Z
+			c = 64
+		}
+
+		c = c + 1; 
+		cout << "CRYPTO: " << char(c) << endl;
+
+	}
+	else 
+	{
+		//Checks user input, returns error message  
+		cout << "YOU DID NOR ENTER A LETTER" << endl;
+	}
+
+
+	return 0;
+}

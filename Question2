@@ -1,0 +1,139 @@
+Question 2 
+
+#include <iostream>
+#include <math.h> 
+
+using namespace std;
+
+//Functions 
+
+//converts celsius to kelvin
+double ctok(double temp)
+{
+	double conv = temp + 273.15;  
+	return conv; 
+}
+
+//converts celsius to fahrenheit 
+double ctof(double temp) 
+{
+	double conv = temp*(9/5) + 32;
+	return conv;		
+}
+
+//converts fahrenheit to celsius 
+double ftoc(double temp) 
+{
+	double conv = temp - 32;
+	conv = conv * (5/9); 
+	return conv; 
+}
+
+//converts fahrenheit to kelvin
+double ftok(double temp) 
+{
+	double conv = temp - 32; 
+	conv = conv * (5/9);
+	conv = conv + 273.15;
+	return conv; 
+}
+
+//converts kelvin to fahrenheit
+double ktof(double temp)
+{
+	double conv = temp - 273.15;
+	conv = conv*(9/5) + 32;
+	return conv; 
+}
+
+//convert kelvin to celsius 
+double ktoc(double temp) 
+{
+	double conv = temp - 273.15;
+	return conv; 
+}
+
+
+int main ()
+{
+	int option;
+	
+	//User input for option 
+	cout << "What conversion option would you like to use?" << endl;
+	cout << "Option 1: Celsius to Fahrenheit" << endl;
+	cout << "Option 2: Celsius to Kelvin" << endl;
+	cout << "Option 3: Fahrenheit to Celsius" << endl;
+	cout << "Option 4: Fahreneit to Kelvin << endl;
+	cout << "Option 5: Kelvin to Celsius" << endl;
+	cout << "Option 6: Kelvin to Fahreneit" << endl; 
+	cout << "Please type the numerical number of the conversion option you would like to use: " << endl;
+	cin >> option;
+
+//Checks user input is valid 
+	while(option<1||option>6)
+	{
+		cout << "You did not choose an avaliable option" << endl;
+		cout << "Please type the numerical number of the conversion option you would like to use: " << endl;
+		cin >> option;	
+	}
+
+
+//calls function based on option selected 
+	if (option == 1) 
+	{
+		cout << "Enter the temperature in Celsius you would like to convert: " << endl;
+		cin >> temp;
+		double conv = ctof(temp);
+		cout << temp << " degrees in Celsius is " << conv << " degrees in Fahrenheit" << endl; 	
+	}
+
+	else if (option == 2) 
+	{
+		cout << "Enter the temperature in Celsius you would like to convert: " << endl;
+		cin >> temp;
+		double conv = ctok(temp);
+		cout << temp << " degrees in Celsius is " << conv << " in Kelvin" << endl; 	
+	}
+
+	else if (option == 3)
+	{
+		cout << "Enter the temperature in Celsius you would like to convert: " << endl;
+		cin >> temp;
+		double conv = ctof(temp);
+		cout << temp << " degrees in Fahrenheit is " << conv << " degrees in Celsius"<< endl; 	
+	}
+
+	else if (option == 4) 
+	{
+		cout << "Enter the temperature in Fahrenheit you would like to convert: " << endl;
+		cin >> temp;
+		double conv = ctof(temp);
+		cout << temp << " degrees in Fahrenheit is " << conv << " in Kelvin" << endl; 	
+	}
+
+	else if (option == 5) 
+	{
+		cout << "Enter the temperature in Kelvin you would like to convert: " << endl;
+		cin >> temp;
+		double conv = ctof(temp);
+		cout << temp << " in Kelvin is " << conv << " degrees in Celsius" << endl; 	
+	} 
+
+	else 
+	{
+		cout << "Enter the temperature in Kelvin you would like to convert: " << endl;
+		cin >> temp;
+		double conv = ktof(temp);
+		cout << temp << " in Kelvin is " << conv << " degrees in Fahrenheit" << endl; 	
+	}
+
+
+	return 0;
+}
+
+
+
+
+
+
+
